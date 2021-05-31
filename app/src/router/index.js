@@ -9,7 +9,11 @@ const routes = [
       {
         path: 'registration',
         component: () => import('../views/lists/Registration.vue'),
-      }
+      },
+      // {
+      //   path: 'items',
+      //   component: () => import('../components/Items.vue')
+      // }
     ]
     
   },
