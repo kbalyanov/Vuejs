@@ -1,0 +1,25 @@
+<template>
+    <div>hello
+        <form action="submit">
+        <div>
+            <label for="name"></label>
+            <input type="text" name="name">
+        </div>            
+        </form>
+    </div>
+    
+</template>
+
+<script>
+
+export default {
+    name: "registration",
+    
+
+    
+}
+</script>
+
+<style scoped>
+
+</style>
