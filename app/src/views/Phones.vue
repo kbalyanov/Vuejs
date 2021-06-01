@@ -4,6 +4,7 @@
     <div v-for="book in finishedBooks" :key="book.id">
         <h2>{{book.title}}</h2>
          <router-link :to="{name: 'items', params: {id: book.id}}">открыть</router-link>
+         <router-link :to="{name: 'Book', params: {id: book.id}}">открыть</router-link>
 
     </div>
     <router-view/>
@@ -11,12 +12,6 @@
 
 <script>
 import HeaderNav from "@/components/HeaderNav";
-
-// import Items from "@/components/Items";
-// import HeaderNav from '../components/HeaderNav.vue';
-// import HeaderNav from '../components/HeaderNav.vue';
-
-
 
 
 export default {
