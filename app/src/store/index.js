@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: { /* глобальное хранилище к которым будут обращаться компаненты */
-    shared: [], // книги которыми поделился пользователь
+    cart: [], // книги которыми поделился пользователь
     usersBook:  [ 
       {
           id: 1,
@@ -69,17 +69,20 @@ export default createStore({
     finishedBooksCount(state, getters) {
       return getters.finishedBooks.length;
     },
-    bookById: state => (id) => {
-      return state.usersBook.filter(book => book.id === id)[0];
+    phoneById: state => (id) => {
+      return state.usersBook.filter(phone => phone.id === id)[0];
     },
     allPhones(state) {
       return state.usersBook;
+    },
+    phonesInCart(state) {
+      return state.cart;
     }
   },
   mutations: { // содержат методы позволяющие изменять состояние хранилища
     // методы которые меняют данные внутри state
-    shareBook(state, book){ // при вызове любого эл из мутации первым будет передоваться обьект state
-      state.shared.push(book);
+    addToCard(state, phone){ // при вызове любого эл из мутации первым будет передоваться обьект state
+      state.cart.push(phone);
     },
     markRead(state, index){
       state.usersBook[index].finished = true;

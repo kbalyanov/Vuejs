@@ -21,7 +21,7 @@ export default {
       tabs: [
         {name: 'Items', path: '/items'},
         {name: 'Registration', path: '/tablets'},
-        
+        {name: 'Cart', path: '/cart'}
       ],
       
       background: "grey"

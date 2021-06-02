@@ -4,8 +4,10 @@
         <h2>{{phone.title}}</h2>
         <p>{{phone.description}}</p>
         <img src="phone.img">
-        </div>
-        </div>
+        <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
+        <input type="button" value="add to card">
+  </div>
+</div>
   <router-view/>
 </template>
 
