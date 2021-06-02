@@ -5,8 +5,8 @@
     <h4 class="text-warning text-center pt-5">Registration Page</h4>
 
     <label>
-      <vee-field type="text" class="input" name="email" placeholder="ENTER EMAIL"/>
-      <vee-error name="email"/>
+      <vee-field type="text" class="input" name="title" placeholder="ENTER EMAIL"/>
+      <vee-error name="title"/>
         <div class="line-box">
           <div class="line"></div>
         </div>

@@ -3,19 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/phones',
-    component: () => import('../views/Phones.vue'),
-    children: [
-      {
-        path: 'registration',
-        component: () => import('../views/lists/Registration.vue'),
-      },
-      {
-        path: 'items',
-        component: () => import('../components/Items.vue')
-      }
-    ]
-    
+    path: '/items',
+    component: () => import('../components/Items.vue')
   },
   {
     path: '/tablets',

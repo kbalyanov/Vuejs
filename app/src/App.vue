@@ -1,5 +1,6 @@
 <template>
   <header-nav :background="background" :tabs="tabs"></header-nav>
+  <!-- <items></items> -->
   <router-view></router-view>
 
  
@@ -10,14 +11,15 @@
 <script>
 
 import HeaderNav from '@/components/HeaderNav';
+// import Items from './components/Items.vue'
 
 
 export default {
-  components: {HeaderNav}, 
+  components: {HeaderNav,}, 
     data(){
     return{
       tabs: [
-        {name: 'Phones', path: '/phones'},
+        {name: 'Items', path: '/items'},
         {name: 'Registration', path: '/tablets'},
         
       ],

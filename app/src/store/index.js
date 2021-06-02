@@ -6,7 +6,7 @@ export default createStore({
     usersBook:  [ 
       {
           id: 1,
-          title: "Lorem ipsum",
+          title: "iPhone 8",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non nulla " +
               "optio quae quod quos repudiandae rerum, tempore",
           img: "https://picsum.photos/200/300?random=8",
@@ -15,7 +15,7 @@ export default createStore({
       },
       {
           id: 2,
-          title: "Aliquam consequatur",
+          title: "iPhone X",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur " +
               "ea fugit inventore laudantium natus",
           img: "https://picsum.photos/200/300?random=5",
@@ -24,7 +24,7 @@ export default createStore({
       },
       {
           id: 3,
-          title: "Laudantium",
+          title: "iPhone 11",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus, necessitatibus " +
               "non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
@@ -34,7 +34,7 @@ export default createStore({
       },
       {
           id: 4,
-          title: "Necessitatibus",
+          title: "iPhone 11 Pro",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non" +
               " nulla optio quae quod quos repudiandae rerum, tempore",
           img: "https://picsum.photos/200/300?random=9",
@@ -43,7 +43,7 @@ export default createStore({
       },
       {
           id: 5,
-          title: "Nulla optio quae quod",
+          title: "iPhone 12",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur ea " +
               "fugit inventore laudantium natus",
           img: "https://picsum.photos/200/300?random=10",
@@ -52,7 +52,7 @@ export default createStore({
       },
       {
           id: 6,
-          title: "Non nulla",
+          title: "iPhone 12Pro",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus," +
               " necessitatibus non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
@@ -71,6 +71,9 @@ export default createStore({
     },
     bookById: state => (id) => {
       return state.usersBook.filter(book => book.id === id)[0];
+    },
+    allPhones(state) {
+      return state.usersBook;
     }
   },
   mutations: { // содержат методы позволяющие изменять состояние хранилища
