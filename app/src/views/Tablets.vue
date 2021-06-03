@@ -1,7 +1,7 @@
 <template>
     
     <div>
-       <vee-form :validation-schema="rules">
+       <vee-form :validation-schema="rules" @submit="sendData">
     <h4 class="text-warning text-center pt-5">Registration Page</h4>
 
     <label>

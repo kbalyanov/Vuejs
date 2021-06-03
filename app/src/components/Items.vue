@@ -5,7 +5,7 @@
         <p>{{phone.description}}</p>
         <img src="phone.img">
         <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
-        <input type="button" value="add to card">
+        <input type="button" value="add to card" @click="addToCard">
   </div>
 </div>
   <router-view/>

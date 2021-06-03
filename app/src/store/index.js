@@ -81,11 +81,16 @@ export default createStore({
   },
   mutations: { // содержат методы позволяющие изменять состояние хранилища
     // методы которые меняют данные внутри state
-    addToCard(state, phone){ // при вызове любого эл из мутации первым будет передоваться обьект state
+    addToCart(state, phone){ // при вызове любого эл из мутации первым будет передоваться обьект state
       state.cart.push(phone);
     },
     markRead(state, index){
       state.usersBook[index].finished = true;
+    },
+    addToUserBook(state,phones){
+      for (let i =0; i < phones.length; i++) {
+        state.usersBook.push(phones[i]);
+      }
     }
   },
   // actions: {

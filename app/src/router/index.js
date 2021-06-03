@@ -7,14 +7,16 @@ const routes = [
     component: () => import('../components/Items.vue'),
    
   },
-  // {
-  //   path: '/cart',
-  //   component: () => import('../views/Cart.vue'),
-  // },
+  
   {
     path: '/tablets',
     component: () => import('../views/Tablets.vue'),
     
+  },
+
+  {
+    path: '/cart',
+    component: () => import('../views/Cart.vue'),
   },
   
 ]
