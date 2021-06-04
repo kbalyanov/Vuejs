@@ -10,8 +10,8 @@ export default createStore({
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non nulla " +
               "optio quae quod quos repudiandae rerum, tempore",
           img: "https://picsum.photos/200/300?random=8",
-          genre: "Жанр 1",
-          finished: false
+          price: "700 $",
+          count:1
       },
       {
           id: 2,
@@ -19,8 +19,8 @@ export default createStore({
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur " +
               "ea fugit inventore laudantium natus",
           img: "https://picsum.photos/200/300?random=5",
-          genre: "Жанр 2",
-          finished: false
+          price: "750 $",
+          count: 1
       },
       {
           id: 3,
@@ -29,8 +29,8 @@ export default createStore({
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus, necessitatibus " +
               "non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
           img: "https://picsum.photos/200/300?random=2",
-          genre: "Жанр 1",
-          finished: false
+          price: "800 $",
+          count: 1
       },
       {
           id: 4,
@@ -38,8 +38,8 @@ export default createStore({
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non" +
               " nulla optio quae quod quos repudiandae rerum, tempore",
           img: "https://picsum.photos/200/300?random=9",
-          genre: "Жанр 1",
-          finished: true
+          price: "900 $",
+          count: 1
       },
       {
           id: 5,
@@ -47,8 +47,8 @@ export default createStore({
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur ea " +
               "fugit inventore laudantium natus",
           img: "https://picsum.photos/200/300?random=10",
-          genre: "Жанр 2",
-          finished: false
+          price: "1000 $",
+          count: 1
       },
       {
           id: 6,
@@ -57,20 +57,23 @@ export default createStore({
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus," +
               " necessitatibus non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
           img: "https://picsum.photos/200/300?random=11",
-          genre: "Жанр 2",
-          finished: true
+          price: "1200 $",
+          count: 1
       }
   ]
   },
   getters: {// получить отфильтрованные данные из state
     finishedBooks(state) { // первым эл state вторым обьект с геттерами
-      return state.usersBook.filter(book => book.finished);
+      return state.usersBook.filter(phone => phone.finished);
     },
     finishedBooksCount(state, getters) {
       return getters.finishedBooks.length;
     },
     phoneById: state => (id) => {
       return state.usersBook.filter(phone => phone.id === id)[0];
+    },
+    goodByCategory: state => (category) => {
+      return state.usersBook.filter(phone => phone.category == category);
     },
     allPhones(state) {
       return state.usersBook;
@@ -80,16 +83,23 @@ export default createStore({
     }
   },
   mutations: { // содержат методы позволяющие изменять состояние хранилища
-    // методы которые меняют данные внутри state
-    addToCart(state, phone){ // при вызове любого эл из мутации первым будет передоваться обьект state
-      state.cart.push(phone);
+    phonesToCart:(state,phone) => {
+      state.usersBook = phone;
     },
-    markRead(state, index){
-      state.usersBook[index].finished = true;
-    },
-    addToUserBook(state,phones){
-      for (let i =0; i < phones.length; i++) {
-        state.usersBook.push(phones[i]);
+    addToCart: (state,phone) => {
+      let product = false;
+      if (state.cart.length) {
+        state.cart.map(function (item) {
+          if (item.id === phone.id) {
+            product = true;
+            item.count++
+          }
+        })
+        if (!product) {
+          state.cart.push(phone)
+        }
+      } else {
+        state.cart.push(phone)
       }
     }
   },

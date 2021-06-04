@@ -63,7 +63,14 @@ export default {
             })
         }
         
+    },
+    methods: {
+      sendData(values) {
+        console.log(values);
+        this.$store.commit('addToCard', {phone:values})
+      }
     }
+
 }
 </script>
 

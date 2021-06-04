@@ -1,11 +1,11 @@
 <template>
-  <!-- <div>{{$route.params.id}}</div> -->
-  <!-- <h2>{{phone.title.toUpperCase()}}</h2>
-  <div>
-      <img src="book.img" >
-  </div>
-  <p>{{phone.description}}</p> -->
-  <div>ewfrew</div>
+  
+  <div v-for="item in phonesInCart" :key="item.id">
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+         <!-- <router-link :to="{name: 'phone', params: {id: phone.id}}">открыть</router-link> -->
+
+    </div>
   <router-view/>
 </template>
 
@@ -14,7 +14,7 @@ import { mapGetters } from 'vuex'
 export default {
     name: "Phone",
     computed: {
-        ...mapGetters(["addToCart"]),
+        ...mapGetters(["phonesInCart"]),
         }
     
 };
