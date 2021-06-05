@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: beige

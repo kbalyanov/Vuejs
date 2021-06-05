@@ -101,8 +101,13 @@ export default createStore({
       } else {
         state.cart.push(phone)
       }
+    },
+    removeElement: (state,index) => {
+      this.phone.splice(index,1);
     }
   },
+
+  
   // actions: {
   // },
   // modules: {
