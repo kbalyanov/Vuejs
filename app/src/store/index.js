@@ -103,7 +103,7 @@ export default createStore({
       }
     },
     removeElement: (state,index) => {
-      this.phone.splice(index,1);
+      state.cart.splice(index,1);
     }
   },
 

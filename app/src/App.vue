@@ -1,7 +1,8 @@
 <template>
-  <header-nav :background="background" :tabs="tabs"></header-nav>
+  <header-nav :background="background" :position="position" :tabs="tabs"></header-nav>
   <!-- <items></items> -->
   <router-view></router-view>
+  <footer-main :background="background"></footer-main>
 
  
   
@@ -11,17 +12,17 @@
 <script>
 
 import HeaderNav from '@/components/HeaderNav';
-// import Items from './components/Items.vue'
+import FooterMain from '@/components/FooterMain';
 
 
 export default {
-  components: {HeaderNav,}, 
+  components: {HeaderNav, FooterMain}, 
     data(){
     return{
       tabs: [
-        {name: 'Items', path: '/items'},
-        {name: 'Registration', path: '/tablets'},
-        {name: 'Cart', path: '/cart'}
+        {name: 'ITEMS', path: '/items'},
+        {name: 'REGISTRATION', path: '/tablets'},
+        {name: 'CART', path: '/cart'}
       ],
       
       background: "grey"
@@ -36,8 +37,13 @@ export default {
 
 <style>
 #app {
-  
+  position: relative;
   color: #2c3e50;
+  z-index: 100;
+};
+#header-nav {
+  text-decoration: none;
+  list-style-type: none;
 }
 
 

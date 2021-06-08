@@ -1,14 +1,15 @@
 <template>
 <div class="items">
-  <div v-for="phone in myGoods" :key="phone.id" class="phone">
+  <div v-for="phone in myGoods" :key="phone.id" class="phones">
         <h2>{{phone.title}}</h2>
-        <p>{{phone.description}}</p>
         <p>{{phone.price}}</p>
         <img src="phone.img">
+        <p>{{phone.description}}</p>
         <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
         <input type="button" value="add to card" v-on:click="chooseCard(phone)">
   </div>
 </div>
+
   <router-view/>
 </template>
 
@@ -39,10 +40,12 @@ export default {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: beige
+  background-color: beige;
+  padding-top: 85px
 };
-.phone {
+.phones {
   text-align: center;
+  width: 50%;
 }
 input {
   padding: 10px;

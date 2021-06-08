@@ -1,5 +1,5 @@
 <template>
-    <nav :style="{backgroundColor: background}">
+    <nav :style="{backgroundColor: background, position:fixed}" >
         <router-link v-for="tab in tabs" :key="tab.path" :to="tab.path" 
         :style="{fontSize: size}">{{tab.name}}</router-link>
     </nav>
@@ -22,6 +22,9 @@ export default {
 nav {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 35px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 </style>
