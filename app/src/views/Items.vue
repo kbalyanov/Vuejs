@@ -1,6 +1,8 @@
 <template>
+
 <div class="items">
-  <div v-for="phone in myGoods" :key="phone.id" class="phones">
+  
+  <div class="phones" v-for="phone in myGoods" :key="phone.id">
         <h2>{{phone.title}}</h2>
         <p>{{phone.price}}</p>
         <img src="phone.img">
@@ -8,6 +10,7 @@
         <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
         <input type="button" value="add to card" v-on:click="chooseCard(phone)">
   </div>
+  
 </div>
 
   <router-view/>
@@ -36,18 +39,25 @@ export default {
 
 <style scoped>
 .items {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 70px;
   background-color: beige;
-  padding-top: 85px
-};
-.phones {
+  padding-top: 85px;
+  padding-left: 30px;
+  padding-right: 30px;
   text-align: center;
-  width: 50%;
-}
+};
+
 input {
   padding: 10px;
-}
+};
+.text {
+  width: 100%;
+  text-align: center;
+};
+p {
+  width: 30%;
+};
+
 </style>

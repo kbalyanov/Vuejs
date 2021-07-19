@@ -1,6 +1,5 @@
 <template>
   <header-nav :background="background" :position="position" :tabs="tabs"></header-nav>
-  <!-- <items></items> -->
   <router-view></router-view>
   <div class="chat">
     <Nav />
