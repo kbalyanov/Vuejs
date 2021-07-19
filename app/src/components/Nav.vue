@@ -31,8 +31,8 @@ export default {
 
 <style scoped>
 .chat{
-  margin-top: 3rem;
-  padding-top: 80px;
+  margin-top: 8rem;
+  padding-top: 100px;
   padding-left: 3rem;
   background-color: lightcoral;
   width: 100%;

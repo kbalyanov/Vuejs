@@ -1,10 +1,13 @@
 <template>
   <header-nav :background="background" :position="position" :tabs="tabs"></header-nav>
+  <div class="image"><img src="./assets/pics/OIP.jpg" alt="wef"></div>
+  
   <router-view></router-view>
   <div class="chat">
     <Nav />
   <Chat />
   </div>
+  
   <footer-main :background="background"></footer-main>
 
   
@@ -49,12 +52,18 @@ export default {
 #header-nav {
   text-decoration: none;
   list-style-type: none;
+  margin: 0 auto;
 }
 .chat{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   flex-wrap: nowrap;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
 }
 
 

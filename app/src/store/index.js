@@ -9,7 +9,7 @@ export default createStore({
           title: "iPhone 8",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non nulla " +
               "optio quae quod quos repudiandae rerum, tempore",
-          img: "https://picsum.photos/200/300?random=8",
+          img: "./assets/pics/OIP.jpg",
           price: "700 $",
           count:1
       },
@@ -59,33 +59,34 @@ export default createStore({
           img: "https://picsum.photos/200/300?random=11",
           price: "1200 $",
           count: 1
-      }
+      },
+      {
+        id: 7,
+        title: "iPhone 7",
+        description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
+            "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus," +
+            " necessitatibus non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
+        img: "https://picsum.photos/200/300?random=11",
+        price: "1200 $",
+        count: 1
+    }
   ]
   },
   getters: {// получить отфильтрованные данные из state
     finishedBooks(state) { // первым эл state вторым обьект с геттерами
       return state.usersBook.filter(phone => phone.finished);
     },
-    finishedBooksCount(state, getters) {
-      return getters.finishedBooks.length;
-    },
     phoneById: state => (id) => {
       return state.usersBook.filter(phone => phone.id === id)[0];
     },
-    goodByCategory: state => (category) => {
-      return state.usersBook.filter(phone => phone.category == category);
-    },
-    allPhones(state) {
-      return state.usersBook;
+    goodByCategory: state => (cat) => {
+      return state.usersBook.filter(phone => phone.cat == cat);
     },
     phonesInCart(state) {
       return state.cart;
     }
   },
   mutations: { // содержат методы позволяющие изменять состояние хранилища
-    phonesToCart:(state,phone) => {
-      state.usersBook = phone;
-    },
     addToCart: (state,phone) => {
       let product = false;
       if (state.cart.length) {

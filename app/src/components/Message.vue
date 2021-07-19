@@ -1,5 +1,5 @@
 <template>
-  <div class="message">
+  <div class="message" >
     <span v-if="!sender">{{ name }}</span>
     <div class="flex" :class="sender ? 'flex-row-reverse' : ''">
       <Avatar class="mt-1" :src="photoUrl" />

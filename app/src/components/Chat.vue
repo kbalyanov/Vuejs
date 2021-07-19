@@ -1,7 +1,7 @@
 <template>
 <div class="cont">
   <div class="container-sm mt-20">
-    <div class="mx-5">
+    <div class="mx-5" style="overflow-y:scroll">
       <Message
         v-for="{ id, text, userPhotoURL, userName, userId } in messages"
         :key="id"
@@ -69,5 +69,8 @@ button {
 input {
   padding: 15px;
   width: 50%;
+}
+.mx-5 {
+  height: 300px;
 }
 </style>

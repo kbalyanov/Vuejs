@@ -2,13 +2,15 @@
 
 <div class="items">
   
-  <div class="phones" v-for="phone in myGoods" :key="phone.id">
+  <div v-for="phone in myGoods" :key="phone.id" >
+    <div class="phones" >
         <h2>{{phone.title}}</h2>
         <p>{{phone.price}}</p>
-        <img src="phone.img">
+        <img src="{phone.image}">
         <p>{{phone.description}}</p>
         <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
         <input type="button" value="add to card" v-on:click="chooseCard(phone)">
+      </div>
   </div>
   
 </div>
@@ -48,7 +50,9 @@ export default {
   padding-right: 30px;
   text-align: center;
 };
-
+.phones {
+  
+}
 input {
   padding: 10px;
 };
