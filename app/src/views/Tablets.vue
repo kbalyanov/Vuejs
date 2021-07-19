@@ -83,7 +83,7 @@ body {
 
 form {
   width: 30%;
-  margin: 60px auto;
+  margin-left: 500px;
   background: #efefef;
   padding: 200px 120px 80px 120px;
   text-align: center;

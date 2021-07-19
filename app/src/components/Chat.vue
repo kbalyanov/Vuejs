@@ -57,9 +57,17 @@ export default {
 </script>
 <style scoped>
 .cont {
-padding: 20px;
+background-color: lightblue;
+width: 100%;
+flex: wrap;
+padding-left: 3rem;
+border-style: solid;
 }
 button {
   padding: 10px;
+}
+input {
+  padding: 15px;
+  width: 50%;
 }
 </style>

@@ -2,7 +2,7 @@
   <header-nav :background="background" :position="position" :tabs="tabs"></header-nav>
   <!-- <items></items> -->
   <router-view></router-view>
-  <div>
+  <div class="chat">
     <Nav />
   <Chat />
   </div>
@@ -51,7 +51,12 @@ export default {
   text-decoration: none;
   list-style-type: none;
 }
-
+.chat{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  flex-wrap: nowrap;
+}
 
 
 </style>
