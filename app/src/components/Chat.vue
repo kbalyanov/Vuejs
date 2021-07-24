@@ -62,9 +62,12 @@ width: 100%;
 flex: wrap;
 padding-left: 3rem;
 border-style: solid;
+border-radius: 5px;
+border: honeydew;
+margin-bottom: 10px;
 }
 button {
-  padding: 10px;
+  padding: 5px;
 }
 input {
   padding: 15px;
@@ -73,4 +76,27 @@ input {
 .mx-5 {
   height: 300px;
 }
+
+@media(max-width: 700px) {
+  .cont {
+background-color: lightblue;
+width: 100%;
+flex: wrap;
+padding-left: 3rem;
+border-style: solid;
+border-radius: 5px;
+border: honeydew;
+margin-bottom: 10px;
+}
+button {
+  padding: 5px;
+}
+input {
+  padding: 15px;
+  width: 50%;
+}
+.mx-5 {
+  height: 300px;
+}
+};
 </style>

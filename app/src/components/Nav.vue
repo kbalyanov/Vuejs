@@ -38,6 +38,8 @@ export default {
   width: 100%;
   border-style: solid;
   border-bottom: hidden;
+  border-radius: 5px;
+  border: honeydew;
 }
 button{
   padding: 10px;

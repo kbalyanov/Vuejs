@@ -6,10 +6,10 @@
     <div class="phones" >
         <h2>{{phone.title}}</h2>
         <p>{{phone.price}}</p>
-        <img src="{phone.image}">
+        <img v-bind:src="require(`../assets/pics/${phone.img}`)">
         <p>{{phone.description}}</p>
         <!-- <router-link :to="{name: 'Book', params: {id: 1}}">Книга 25</router-link> --> 
-        <input type="button" value="add to card" v-on:click="chooseCard(phone)">
+        <input type="button" class="button" value="add to card" v-on:click="chooseCard(phone)">
       </div>
   </div>
   
@@ -49,19 +49,30 @@ export default {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-};
-.phones {
-  
+  left: 0;
+  right: 0;
 }
 input {
-  padding: 10px;
-};
+  padding: 20px;
+}
 .text {
   width: 100%;
   text-align: center;
 };
 p {
   width: 30%;
+};
+img {
+  padding: 30px;
+  width: 100%;
+}
+
+
+@media(max-width: 700px) {
+  .items {
+    display: flex; 
+    flex-direction: column
+  }
 };
 
 </style>

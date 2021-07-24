@@ -1,6 +1,10 @@
 <template>
   <header-nav :background="background" :position="position" :tabs="tabs"></header-nav>
-  <div class="image"><img src="./assets/pics/OIP.jpg" alt="wef"></div>
+  <div class="p">
+    <h1>iPhones for sale</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+      Corrupti dolores sint voluptas ullam? Facere mollitia non, nostrum pariatur aliquid ratione.</p>
+  </div>
   
   <router-view></router-view>
   <div class="chat">
@@ -20,6 +24,7 @@ import HeaderNav from '@/components/HeaderNav';
 import FooterMain from '@/components/FooterMain';
 import Nav from '@/components/Nav.vue';
 import Chat from '@/components/Chat.vue';
+
 
 
 
@@ -44,6 +49,9 @@ export default {
 
 
 <style>
+*{
+  box-sizing: border-box;
+}
 #app {
   position: relative;
   color: #2c3e50;
@@ -52,7 +60,7 @@ export default {
 #header-nav {
   text-decoration: none;
   list-style-type: none;
-  margin: 0 auto;
+  
 }
 .chat{
   display: flex;
@@ -61,10 +69,37 @@ export default {
   flex-wrap: nowrap;
 }
 
-.image{
-  display: flex;
-  justify-content: center;
+.p {
+  padding-top: 80px;
+  text-align: center;
+  color: black;
 }
+
+.items{
+  width: 100%;
+}
+
+
+@media(max-width: 1200px) {
+ .chat{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  flex-wrap: nowrap;
+ }
+};
+
+@media(max-width: 700px) {
+  .chat{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  flex-wrap: nowrap;
+}
+
+
+  
+};
 
 
 </style>

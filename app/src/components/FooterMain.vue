@@ -25,5 +25,7 @@ div {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    width: 100%;
+    margin: 0;
 }
 </style>

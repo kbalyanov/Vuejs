@@ -1,12 +1,12 @@
 <template>
     
-    <div>
-       <vee-form :validation-schema="rules" @submit="sendData">
+<div>
+  <vee-form :validation-schema="rules" @submit="sendData" class="form">
     <h4 class="text-warning text-center pt-5">Registration Page</h4>
 
     <label>
-      <vee-field type="text" class="input" name="title" placeholder="ENTER EMAIL"/>
-      <vee-error name="title"/>
+      <vee-field type="text" class="input" name="email" placeholder="ENTER EMAIL"/>
+      <vee-error name="email"/>
         <div class="line-box">
           <div class="line"></div>
         </div>
@@ -57,9 +57,13 @@ export default {
         return{
             rules: yup.object({
                 //значение атрибута name: правило
-                title: yup.string().trim().required("Поле обязательно заполнить").max(20, "Максимум 20 символов"),
-                pageCount: yup.number().typeError("Введите число").required("Поле обязательно заполнить")
-                .positive("Введите значение больше 0").integer("Введите целое число")
+                email: yup.string().trim().required("Поле обязательно заполнить").max(20, "Максимум 20 символов"),
+                username: yup.string().trim().required("Поле обязательно заполнить")
+                .max(20, "Максимум 20 символов").min(2,"Минимум 2 символа"),
+                password: yup.number().typeError("Введите число").required("Поле обязательно заполнить")
+                .positive("Введите значение больше 0").integer("Введите целое число"),
+                confirm: yup.number().typeError("Введите число").required("Поле обязательно заполнить")
+                .positive("Введите значение больше 0").integer("Введите целое число"),
             })
         }
         
@@ -81,7 +85,7 @@ body {
 
 
 
-form {
+.form {
   width: 30%;
   margin-left: 500px;
   background: #efefef;
@@ -117,13 +121,20 @@ label {
   border: none;
   outline: none;
 }
+.email {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+};
 
 .line-box {
   position: relative;
   width: 100%;
   height: 1px;
   background: #BCBCBC;
-}
+};
 
 .line {
   position: absolute;
@@ -134,15 +145,15 @@ label {
   transform: translateX(-50%);
   background: #8BC34A;
   transition: ease .6s;
-} 
+} ;
 
 .input:focus + .line-box .line {
   width: 100%;
-}
+};
 
 .label-active {
   top: -3em;
-}
+};
 
 button {
   display: inline-block;
@@ -155,10 +166,81 @@ button {
   border-radius: 3px;
   cursor: pointer;
   transition: ease .3s;
-} 
+};
 
 button:hover {
   background: #8BC34A;
   color: #ffffff;
-} 
+}
+
+@media(max-width: 2000px) {
+  .form {
+  width: 50%;
+  margin-left: 500px;
+  background: #efefef;
+  padding: 200px 120px 80px 120px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+  button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgb(220,220,220);
+  font-weight: bold;
+  color: rgb(120,120,120);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease .3s;
+};
+}
+
+@media(max-width: 1200px) {
+  .form {
+  width: 50%;
+  margin-left: 300px;
+  background: #efefef;
+  padding: 100px 80px 80px 80px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+  button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgb(220,220,220);
+  font-weight: bold;
+  color: rgb(120,120,120);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+}
+
+@media(max-width: 700px ) {
+  .form {
+    margin-left: 80px;
+    padding: 20px 10px 90px 10px;
+    width: 50%;
+  }
+  button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgb(220,220,220);
+  font-weight: bold;
+  color: rgb(120,120,120);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease .3s;
+};
+
+
+};
+
 </style>

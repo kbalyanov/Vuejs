@@ -9,8 +9,9 @@ export default createStore({
           title: "iPhone 8",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non nulla " +
               "optio quae quod quos repudiandae rerum, tempore",
-          img: "./assets/pics/OIP.jpg",
+          // img: "../assets/pics/OIP.jpg",
           price: "700 $",
+          img: "th (5).jpg",
           count:1
       },
       {
@@ -18,7 +19,7 @@ export default createStore({
           title: "iPhone X",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur " +
               "ea fugit inventore laudantium natus",
-          img: "https://picsum.photos/200/300?random=5",
+          img: "th (4).jpg",
           price: "750 $",
           count: 1
       },
@@ -28,7 +29,7 @@ export default createStore({
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus, necessitatibus " +
               "non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
-          img: "https://picsum.photos/200/300?random=2",
+          img: "th (2).jpg",
           price: "800 $",
           count: 1
       },
@@ -37,7 +38,7 @@ export default createStore({
           title: "iPhone 11 Pro",
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non" +
               " nulla optio quae quod quos repudiandae rerum, tempore",
-          img: "https://picsum.photos/200/300?random=9",
+          img: "th (7).jpg",
           price: "900 $",
           count: 1
       },
@@ -46,7 +47,7 @@ export default createStore({
           title: "iPhone 12",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam consequatur ea " +
               "fugit inventore laudantium natus",
-          img: "https://picsum.photos/200/300?random=10",
+          img: "th (7).jpg",
           price: "1000 $",
           count: 1
       },
@@ -56,7 +57,7 @@ export default createStore({
           description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
               "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus," +
               " necessitatibus non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
-          img: "https://picsum.photos/200/300?random=11",
+          img: "th (7).jpg",
           price: "1200 $",
           count: 1
       },
@@ -66,7 +67,7 @@ export default createStore({
         description: "A ab aliquam consequatur ea fugit inventore laudantium natus, necessitatibus non " +
             "nulla optio quae quod quos repudiandae rerum, tempore, voluptate. laudantium natus," +
             " necessitatibus non nulla optio quae quod quos repudiandae rerum, tempore, voluptate.",
-        img: "https://picsum.photos/200/300?random=11",
+        img: "th (5).jpg",
         price: "1200 $",
         count: 1
     }
